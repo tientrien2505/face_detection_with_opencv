@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     private Mat mRgbaT;
     private Mat mGray;
     //    private Mat mRgbaR;
-    private JavaCamera2View mCameraView;
+//    private JavaCamera2View mCameraView;
+    private CameraBridgeViewBase mCameraView;
     private File mCascadeFile;
     private CascadeClassifier mCascadeClassifier;
     private static final String TAG = "FaceDetection";
@@ -191,5 +193,6 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
 
         return mRgba;
+//        return inputFrame.rgba();
     }
 }
